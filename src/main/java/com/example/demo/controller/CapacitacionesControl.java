@@ -18,11 +18,11 @@ import com.example.demo.model.Capacitaciones;
 
 @Controller
 @RequestMapping("/")
-public class Control {
+public class CapacitacionesControl {
 	private final CapacitacionesDAO capacitacionesDAO;
   
     @Autowired	
-	public Control(CapacitacionesDAO capacitacionesDAO) {
+	public CapacitacionesControl(CapacitacionesDAO capacitacionesDAO) {
 		this.capacitacionesDAO = capacitacionesDAO;
 	}
 
