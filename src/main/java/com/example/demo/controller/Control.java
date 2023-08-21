@@ -55,5 +55,8 @@ public class Control {
       model.addAttribute("capacitacion", new Capacitaciones());
       return "crearcapacitacion";
 	}
-   
+
+    
+  
+    
 }
