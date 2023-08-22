@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+	th:href="@{/webjars/bootstrap/5.3.1/css/bootstrap.min.css}"
+	rel="stylesheet" />
+
+
+<title>Listar Visitas</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div
+					th:if="${listarVisitas !=null and !listarVisitas.empty}">
+					<table class="table table-striped table-hover">
+						<tr>
+							<th>Nombre</th>
+							<th>Tipo</th>
+						</tr>
+						<tr th:each="visitas : ${listarVisitas}">
+							<td th:text="${visitas.tipo}">Mostrar tipo</td>
+							<td th:text="${visitas.cliente_id}">Mostrar cliente id</td>
+							<td th:text="${visitas.profesional_id}">Mostrar profesional id</td>
+							<td th:text="${visitas.nombre}">Mostrar nombre</td>
+						</tr>
+					</table>
+				</div>
+				<div
+					th:if="${listarVisitas == null or listarVisitas.empty}">
+					<p>La lista está vacía</p>
+				</div>
+			</div>
+		</div>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
