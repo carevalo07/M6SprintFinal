@@ -2,6 +2,7 @@ package com.example.demo.dao;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -12,8 +13,8 @@ import com.example.demo.model.VisitasRowMapper;
 public class VisitasDAOImpl implements VisitasDAO{
 	private final JdbcTemplate jdbcTemplate;
 
+	@Autowired
 	public VisitasDAOImpl(JdbcTemplate jdbcTemplate) {
-		super();
 		this.jdbcTemplate = jdbcTemplate;
 	}
 	

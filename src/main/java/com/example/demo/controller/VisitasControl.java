@@ -8,7 +8,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.example.demo.dao.VisitasDAO;
 import com.example.demo.model.Capacitaciones;
+import com.example.demo.model.Visitas;
 
 @Controller
 @RequestMapping("/")
