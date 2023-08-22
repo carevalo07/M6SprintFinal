@@ -3,14 +3,14 @@ package com.example.demo.dao;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
 import com.example.demo.model.Capacitaciones;
 
-public interface CapacitacionesDAO {
-	List<Capacitaciones> ListarCapacitaciones();
-	long addCapacitaciones(Capacitaciones capacitaciones);
-	Optional<Capacitaciones> findById(long id);
-	
-	long deleteCapacitaciones (Long id);
-	long updateCapacitaciones (long id, Capacitaciones capacitaciones);
+
+@Repository 
+public interface CapacitacionesDAO extends JpaRepository<Capacitaciones, Long> {
+	List<Capacitaciones> findAll();
 
 }

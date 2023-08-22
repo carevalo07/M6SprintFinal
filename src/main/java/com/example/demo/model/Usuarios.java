@@ -1,10 +1,18 @@
 package com.example.demo.model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "usuarios")
 public class Usuarios {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 
 	private String nombre;
 	private String tipo;
-	
+
 	public Usuarios(String nombre, String tipo) {
 		this.nombre = nombre;
 		this.tipo = tipo;
@@ -30,6 +38,5 @@ public class Usuarios {
 	public String toString() {
 		return "Usuarios [nombre=" + nombre + ", tipo=" + tipo + "]";
 	}
-	
-	
+
 }

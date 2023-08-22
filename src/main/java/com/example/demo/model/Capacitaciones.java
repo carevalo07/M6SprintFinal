@@ -1,6 +1,15 @@
 package com.example.demo.model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name="capacitaciones")
 public class Capacitaciones {
+
+    
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;	
 
 	private String nombre;
 	private String detalle;
@@ -22,13 +31,14 @@ public class Capacitaciones {
 	public void setDetalle(String detalle) {
 		this.detalle = detalle;
 	}
+/*
 	public Capacitaciones( String nombre, String detalle) {
 		super();
 		//this.id = id;
 		this.nombre = nombre;
 		this.detalle = detalle;
 	}
-
+*/
 
 	@Override
 	public String toString() {
