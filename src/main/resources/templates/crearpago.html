@@ -11,7 +11,7 @@
 <div class="container">
   <div class="row">
     <div class="col">
-       <form th:action="@{/add}" method="post" th:object="${pago}">
+       <form th:action="@{/addPago}" method="post" th:object="${pago}">
 
 	     <label for="cliente_id" class="form-label">Cliente ID</label> 
      	    <input class="form-control" type="number" name="cliente_id" th:field="*{cliente_id}"/>
