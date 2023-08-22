@@ -2,4 +2,55 @@ package com.example.demo.model;
 
 public class Visitas {
 
+	private int cliente_id;
+	private String fecha_visita;
+	private String detalle;
+	private int profesional_id;
+	
+	public Visitas(int cliente_id, String fecha_visita, String detalle, int profesional_id) {
+		this.cliente_id = cliente_id;
+		this.fecha_visita = fecha_visita;
+		this.detalle = detalle;
+		this.profesional_id = profesional_id;
+	}
+
+	public int getCliente_id() {
+		return cliente_id;
+	}
+
+	public void setCliente_id(int cliente_id) {
+		this.cliente_id = cliente_id;
+	}
+
+	public String getFecha_visita() {
+		return fecha_visita;
+	}
+
+	public void setFecha_visita(String fecha_visita) {
+		this.fecha_visita = fecha_visita;
+	}
+
+	public String getDetalle() {
+		return detalle;
+	}
+
+	public void setDetalle(String detalle) {
+		this.detalle = detalle;
+	}
+
+	public int getProfesional_id() {
+		return profesional_id;
+	}
+
+	public void setProfesional_id(int profesional_id) {
+		this.profesional_id = profesional_id;
+	}
+
+	@Override
+	public String toString() {
+		return "Visitas [cliente_id=" + cliente_id + ", fecha_visita=" + fecha_visita + ", detalle=" + detalle
+				+ ", profesional_id=" + profesional_id + "]";
+	}
+	
+	
 }
