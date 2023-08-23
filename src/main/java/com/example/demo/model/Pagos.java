@@ -7,17 +7,14 @@ import jakarta.persistence.*;
 public class Pagos {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	private int cliente_id;
 	private int monto;
 	private String fecha_pago;
 
-	public Pagos(int cliente_id, int monto, String fecha_pago) {
-		this.cliente_id = cliente_id;
-		this.monto = monto;
-		this.fecha_pago = fecha_pago;
+	public Pagos() {
 	}
 
 	public int getCliente_id() {

@@ -12,5 +12,5 @@ import com.example.demo.model.Capacitaciones;
 @Repository 
 public interface CapacitacionesDAO extends JpaRepository<Capacitaciones, Long> {
 	List<Capacitaciones> findAll();
-
+	
 }
