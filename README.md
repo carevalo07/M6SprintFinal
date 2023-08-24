@@ -3,20 +3,21 @@
 >  Sprint final modulo 6 Proyecto final desarrollo de aplicaciones con Spring Framework
 
 Autores: Piero Vaccaro - Diego Pérez - Cristobal Arevalo
+
 ## Repositorio de los integrantes
 
-* https://github.com/diegoperezm/M5SprintFinal.git
-* https://github.com/carevalo07/M5SprintFinal.git
-* https://github.com/PieroVaccaro/M5SprintFinal.git
+* https://github.com/diegoperezm/M6SprintFinal.git
+* https://github.com/carevalo07/M6SprintFinal.git
+* https://github.com/PieroVaccaro/M6SprintFinal.git
 
 ## Ejecutar el programa:
 
 * Descargar repositorio:
 
-```git clone https://github.com/carevalo07/M5SprintFinal.git```
+```git clone https://github.com/carevalo07/M6SprintFinal.git```
 
 
-## 
+## Contenido  
 
 El proyecto contiene las siguientes páginas:
 
@@ -32,6 +33,10 @@ El proyecto contiene las siguientes páginas:
 * Listado de visitas
 * Listado de pago
 * Crear pago
+
+## Base de datos
+
+En el proyecto se incluye un script de SQL para generar la base de datos.
 
 
 ## Licensing
