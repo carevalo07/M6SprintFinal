@@ -36,7 +36,7 @@ El proyecto contiene las siguientes páginas:
 
 ## Base de datos
 
-En el proyecto se incluye un script de SQL para generar la base de datos.
+En el proyecto se incluye un script de SQL para generar la base de datos en la carpeta "BD" archivo "prevencion_riesgos.sql".
 
 
 ## Licensing
