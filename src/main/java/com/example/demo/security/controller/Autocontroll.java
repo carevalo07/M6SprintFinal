@@ -66,7 +66,8 @@ public class Autocontroll {
 				.collect(Collectors.toList());
 
 		return ResponseEntity.ok(
-				new JwtResponse(jwt, userDetails.getId(),
+				new JwtResponse(jwt,
+								userDetails.getId(),
 								userDetails.getUsername(),
 								userDetails.getEmail(),
 								roles));
