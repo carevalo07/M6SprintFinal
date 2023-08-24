@@ -14,7 +14,7 @@
   <div class="row">
     <div class="col">
        <form th:action="@{/agregarVisitas}" method="post" th:object="${visita}">
-
+		<h1>Formulario de visitas:</h1>
 	    <label for="cliente_id"  class="form-label">Cliente ID</label> 
 	        <input class="form-control" type="number" name="cliente_id" th:field="*{cliente_id}"/>
 	        <br>

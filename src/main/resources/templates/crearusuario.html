@@ -14,12 +14,16 @@
   <div class="row">
     <div class="col">
        <form th:action="@{/agregarUsuarios}" method="post" th:object="${usuario}">
+       <h1>Formulario de usuarios:</h1>
 	     <label for="nombre" class="form-label">Nombre</label> 
      	    <input class="form-control" type="text" name="nombre" th:field="*{nombre}"/>
 	        <br>
-	    <label for="tipo"  class="form-label">Tipo</label> 
-	        <input class="form-control" type="text" name="tipo" th:field="*{tipo}"/>
-	        <br>
+	     <label class="mt-2" for="tipo">Seleccione un tipo:</label>
+	      <select class="custom-select" name="tipo" th:field="*{tipo}" required>
+								<option value="Cliente">Cliente</option>
+								<option value="Administrativo">Administrativo</option>
+								<option value="Profesional">Profesional</option>
+		  </select>
 
       <input type="submit" class="btn btn-primary" name="guardar" value="Guardar" />
      </form>
