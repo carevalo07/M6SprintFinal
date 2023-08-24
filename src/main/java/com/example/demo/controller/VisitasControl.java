@@ -26,6 +26,17 @@ public class VisitasControl {
 		this.visitasDAO = visitasDAO;
 	}
 
+    @GetMapping("/crearVisita")
+    public String crearVisita(Model model) {
+    	model.addAttribute("visita", new Visitas());
+    	return "crearvisita";
+    }
+    
+    @PostMapping("/agregarVisitas")
+    public String agregarVisitas(Visitas visitas) {
+    	visitasDAO.save(visitas);
+    	return "redirect:/listarVisitas";
+    }
 
 	@GetMapping("/listarVisitas")
 	public String listarVisitas(Model model) {
@@ -34,7 +45,4 @@ public class VisitasControl {
       return "listarvisitas";
 	}
   
-    
-  
-    
 }

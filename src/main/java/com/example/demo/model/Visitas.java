@@ -16,11 +16,8 @@ public class Visitas {
 	private String detalle;
 	private int profesional_id;
 	
-	public Visitas(int cliente_id, String fecha_visita, String detalle, int profesional_id) {
-		this.cliente_id = cliente_id;
-		this.fecha_visita = fecha_visita;
-		this.detalle = detalle;
-		this.profesional_id = profesional_id;
+	public Visitas() {
+
 	}
 
 	public int getCliente_id() {

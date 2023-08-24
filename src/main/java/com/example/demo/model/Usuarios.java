@@ -13,9 +13,7 @@ public class Usuarios {
 	private String nombre;
 	private String tipo;
 
-	public Usuarios(String nombre, String tipo) {
-		this.nombre = nombre;
-		this.tipo = tipo;
+	public Usuarios() {
 	}
 
 	public String getNombre() {

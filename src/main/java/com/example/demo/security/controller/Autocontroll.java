@@ -53,7 +53,7 @@ public class Autocontroll {
 	JwtUtils jwtUtils;
 
 	@PostMapping("/signin")
-	public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
+	public ResponseEntity<?> authenticateUser(@Valid LoginRequest loginRequest) {
 
 		Authentication authentication = authenticationManager.authenticate(
 				new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword()));
@@ -66,11 +66,14 @@ public class Autocontroll {
 				.collect(Collectors.toList());
 
 		return ResponseEntity.ok(
-				new JwtResponse(jwt, userDetails.getId(), userDetails.getUsername(), userDetails.getEmail(), roles));
+				new JwtResponse(jwt, userDetails.getId(),
+								userDetails.getUsername(),
+								userDetails.getEmail(),
+								roles));
 	}
 
 	@PostMapping("/signup")
-	public ResponseEntity<?> registerUser(@Valid @RequestBody SignUpRequest signUpRequest) {
+	public ResponseEntity<?> registerUser(@Valid SignUpRequest signUpRequest) {
 		if (userRepository.existsByUsername(signUpRequest.getUsername())) {
 			return ResponseEntity.badRequest().body(new MessageResponse("Error: Username is already taken!"));
 		}
@@ -93,16 +96,22 @@ public class Autocontroll {
 		} else {
 			strRoles.forEach(role -> {
 				switch (role) {
-				case "admin":
-					Role adminRole = roleRepository.findByName(ERole.ROLE_CLIENTE)
+				case "cliente":
+					Role clienteRole = roleRepository.findByName(ERole.ROLE_CLIENTE)
 							.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
-					roles.add(adminRole);
+					roles.add(clienteRole);
 
 					break;
-				case "mod":
-					Role modRole = roleRepository.findByName(ERole.ROLE_PROFESIONAL)
+				case "pro":
+					Role proRole = roleRepository.findByName(ERole.ROLE_PROFESIONAL)
 							.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
-					roles.add(modRole);
+					roles.add(proRole);
+
+					break;
+				case "admi":
+					Role admiRole = roleRepository.findByName(ERole.ROLE_ADMINISTRATIVO)
+							.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
+					roles.add(admiRole);
 
 					break;
 				default:

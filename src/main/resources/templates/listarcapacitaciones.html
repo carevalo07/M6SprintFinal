@@ -7,7 +7,6 @@
 	th:href="@{/webjars/bootstrap/5.3.1/css/bootstrap.min.css}"
 	rel="stylesheet" />
 
-
 <title>Listar Capacitaciones</title>
 </head>
 <body>
@@ -18,12 +17,14 @@
 					th:if="${listaCapacitaciones !=null and !listaCapacitaciones.empty}">
 					<table class="table table-striped table-hover">
 						<tr>
+							<th>ID</th>
 							<th>Nombre</th>
 							<th>Detalle</th>
 						</tr>
 						<tr th:each="capacitacion : ${listaCapacitaciones}">
-							<td th:text="${capacitacion.nombre}">Mostrar Nombre</td>
-							<td th:text="${capacitacion.detalle}">Mostrar Detalle</td>
+							<td th:text="${capacitacion.id}"></td>
+							<td th:text="${capacitacion.nombre}"></td>
+							<td th:text="${capacitacion.detalle}"></td>
 						</tr>
 					</table>
 				</div>

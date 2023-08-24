@@ -41,7 +41,11 @@ public class PagosControl {
       return "listarpagos";
 	}
   
-    
+    @GetMapping("/all2")    
+    public String all( ) {
+      return "index";	
+    }
+ 
   
     
 }

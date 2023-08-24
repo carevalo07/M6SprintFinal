@@ -13,6 +13,14 @@ public class Pagos {
 	private int cliente_id;
 	private int monto;
 	private String fecha_pago;
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public Pagos() {
 	}

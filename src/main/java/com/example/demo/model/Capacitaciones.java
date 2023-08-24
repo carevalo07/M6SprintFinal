@@ -14,7 +14,18 @@ public class Capacitaciones {
 	private String nombre;
 	private String detalle;
 
-	public Capacitaciones() {}
+	public Capacitaciones() {
+		
+	}
+	
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public String getNombre() {
 		return nombre;
@@ -31,14 +42,6 @@ public class Capacitaciones {
 	public void setDetalle(String detalle) {
 		this.detalle = detalle;
 	}
-/*
-	public Capacitaciones( String nombre, String detalle) {
-		super();
-		//this.id = id;
-		this.nombre = nombre;
-		this.detalle = detalle;
-	}
-*/
 
 	@Override
 	public String toString() {

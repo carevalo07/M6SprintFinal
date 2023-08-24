@@ -11,22 +11,22 @@
 <div class="container">
   <div class="row">
     <div class="col">
-       <form th:action="@{/addVisita}" method="post" th:object="${visita}">
+       <form th:action="@{/agregarVisitas}" method="post" th:object="${visita}">
 
 	    <label for="cliente_id"  class="form-label">Cliente ID</label> 
 	        <input class="form-control" type="number" name="cliente_id" th:field="*{cliente_id}"/>
 	        <br>
 
+	     <label for="fecha_visita" class="form-label">Fecha de visita</label> 
+     	    <input class="form-control" type="text" name="nombre" th:field="*{fecha_visita}"/>
+	        <br>
+
+	    <label for="detalle"  class="form-label">Detalle</label> 
+	        <input class="form-control" type="text" name="tipo" th:field="*{detalle}"/>
+	        <br>
+	        
 	    <label for="profesional_id"  class="form-label">Profesional ID</label> 
 	        <input class="form-control" type="number" name="profesional_id" th:field="*{profesional_id}"/>
-	        <br>
-
-	     <label for="nombre" class="form-label">Nombre</label> 
-     	    <input class="form-control" type="text" name="nombre" th:field="*{nombre}"/>
-	        <br>
-
-	    <label for="tipo"  class="form-label">Tipo</label> 
-	        <input class="form-control" type="text" name="tipo" th:field="*{tipo}"/>
 	        <br>
 
       <input type="submit" class="btn btn-primary" name="guardar" value="Guardar" />

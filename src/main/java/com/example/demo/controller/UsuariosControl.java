@@ -26,7 +26,18 @@ public class UsuariosControl {
 		this.usuariosDAO = usuariosDAO;
 	}
 
-
+    @GetMapping("/crearUsuarios")
+    public String crearUsuarios(Model model) {
+    	model.addAttribute("usuario", new Usuarios());
+    	return "crearusuario";
+    }
+    
+    @PostMapping("/agregarUsuarios")
+    public String agregarUsuarios(Usuarios usuarios) {
+    	usuariosDAO.save(usuarios);
+    	return "redirect:/listarUsuarios";
+    }
+    
 	@GetMapping("/listarUsuarios")
 	public String listarUsuarios(Model model) {
 	  List<Usuarios> listarUsuarios =  usuariosDAO.findAll();
