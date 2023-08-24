@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      th:href="@{/webjars/bootstrap/5.3.1/css/bootstrap.min.css}"
+      rel="stylesheet" />
+<title>Editar Visita</title>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col">
+       <form th:action="@{actualizarVisitas}" method="post" th:object="${visita}">
+       
+       	 <label for="id" class="form-label">ID</label> 
+     	    <input class="form-control" type="text" name="id" th:field="*{id}" readonly/>
+	        <br>
+	     <label for="id" class="form-label">ID Cliente</label> 
+     	    <input class="form-control" type="text" name="id" th:field="*{cliente_id}" />
+	        <br>
+	     <label for="nombre" class="form-label">Fecha visita</label> 
+     	    <input class="form-control" type="text" name="nombre" th:field="*{fecha_visita}"/>
+	        <br>
+	     <label for="detalle"  class="form-label">Detalle</label> 
+	        <input class="form-control" type="text" name="detalle" th:field="*{detalle}"/>
+	        <br>
+	     <label for="id" class="form-label">ID Profesional</label> 
+     	    <input class="form-control" type="text" name="id" th:field="*{profesional_id}" />
+	        <br>
+      <input type="submit" class="btn btn-primary" name="guardar" value="Guardar" />
+     </form>
+  </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

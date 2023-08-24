@@ -11,6 +11,8 @@ import jakarta.persistence.Table;
 public class Visitas {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
 	private int cliente_id;
 	private String fecha_visita;
 	private String detalle;
@@ -18,6 +20,14 @@ public class Visitas {
 	
 	public Visitas() {
 
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public int getCliente_id() {
@@ -54,9 +64,11 @@ public class Visitas {
 
 	@Override
 	public String toString() {
-		return "Visitas [cliente_id=" + cliente_id + ", fecha_visita=" + fecha_visita + ", detalle=" + detalle
-				+ ", profesional_id=" + profesional_id + "]";
+		return "Visitas [id=" + id + ", cliente_id=" + cliente_id + ", fecha_visita=" + fecha_visita + ", detalle="
+				+ detalle + ", profesional_id=" + profesional_id + "]";
 	}
+
+
 	
 	
 }

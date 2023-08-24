@@ -56,7 +56,7 @@ public class WebSecurityConfig {
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
-		http.csrf(csrf -> csrf.disable())
+		/*http.csrf(csrf -> csrf.disable())
 				// .exceptionHandling(exception ->
 				// exception.authenticationEntryPoint(unauthorizedHandler))
 				.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
@@ -64,7 +64,7 @@ public class WebSecurityConfig {
 						auth -> auth.requestMatchers("/api/auth/**").permitAll().requestMatchers("/api/test/**")
 								.permitAll().requestMatchers("/login").permitAll().anyRequest().authenticated())
 				.formLogin(formLogin -> formLogin.loginPage("/login").permitAll());
-
+		*/
 		http.authenticationProvider(authenticationProvider());
 
 		http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
